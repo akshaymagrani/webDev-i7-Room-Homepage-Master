@@ -1,0 +1,249 @@
+/*____Global____*/
+:root {
+  --DarkGray: hsl(0, 0%, 63%);
+  --Black: hsl(0, 0%, 0%);
+  --White: hsl(0, 0%, 100%);
+  --VeryDarkGray: hsl(0, 0%, 27%);
+}
+body {
+  font-family: "Spartan", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 12px;
+}
+section p {
+  color: gray;
+}
+.imageLight,
+.imageDark {
+  display: block;
+  height: auto;
+  max-width: min(100%, 425px);
+  margin: auto;
+}
+#intro,
+#aboutUs,
+#manufactureSec,
+#aboutOurFurnitureSec {
+  max-width: min(375px, 576px);
+  margin: auto;
+  line-height: 1.8em;
+  padding: 2.5em;
+}
+.shop {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: black;
+  margin: 3em 0 0;
+}
+.shop:hover {
+  cursor: pointer;
+}
+.hamburger,
+.close {
+  padding: 1.2rem;
+}
+.close {
+  margin-left: 2em;
+}
+.hamburger:hover,
+.close:hover {
+  border: 2px dotted blue;
+}
+/*____Header Section and Navigation____*/
+.upperSection {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  position: relative;
+}
+header {
+  position: relative;
+  background-image: url("images/mobile-image-hero-1.jpg");
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: top;
+  height: 400px;
+  background-size: auto 100%;
+  background-color: var(--DarkGray);
+}
+header .svg {
+  position: absolute;
+  z-index: 1;
+  padding: 2em;
+}
+.svg svg {
+  padding: 1.2rem;
+}
+header nav {
+  position: fixed;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  display: none;
+}
+nav ul {
+  list-style-type: none;
+  display: flex;
+  padding-left: 0;
+  margin: 2em 0;
+}
+ul li {
+  padding: 1.5em 1em 1em;
+  text-transform: lowercase;
+  font-weight: bold;
+  border-bottom: 2px solid transparent;
+  margin: 0.2em;
+}
+ul li:hover {
+  border-bottom: 2px solid black;
+  cursor: pointer;
+}
+@media only screen and (min-width: 756px) {
+  ul li {
+    margin: 2em auto;
+  }
+  ul li:hover {
+    border-bottom-color: white;
+  }
+}
+nav svg {
+  align-self: center;
+  padding: 1em;
+}
+.buttonDiv {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: black;
+  display: flex;
+  width: -moz-fit-content;
+  grid-row: 1/2;
+}
+#btnLeft,
+#btnRight {
+  border: none;
+  background-color: var(--Black);
+  padding: 0.5em 1em;
+}
+.buttonDiv .left,
+.buttonDiv .right {
+  padding: 0.5em;
+  margin: 0;
+  transform: scale(0.6);
+  border: none;
+}
+#btnLeft:hover,
+#btnRight:hover {
+  background-color: grey;
+  cursor: pointer;
+}
+/*____Introduction____*/
+#intro h1,
+#manufactureSec h1,
+#aboutUs h1 {
+  font-size: 2.5em;
+  line-height: 1em;
+}
+#intro:last-child(p) {
+  text-transform: uppercase;
+  color: black;
+}
+/*____About Us____*/
+#aboutUs {
+  display: none;
+}
+/*____Manufacture____*/
+#manufactureSec {
+  display: none;
+}
+/*____LowerSection____*/
+@media only screen and (min-width: 976px) {
+  main {
+    width: min(1250px, 100%);
+    margin: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  header {
+    background-size: cover;
+    height: 60vh;
+    background-position: bottom;
+  }
+  .upperSection {
+    display: grid;
+    grid-template-columns: 50% 10% 10% 40%;
+    height: 60vh;
+    position: relative;
+    grid-template-rows: none;
+  }
+  .svg {
+    position: static;
+  }
+  .headerNav {
+    grid-column: 1/3;
+    display: flex;
+  }
+  .buttonDiv {
+    grid-column: 3/4;
+    display: flex;
+    width: 100%;
+  }
+  #btnLeft,
+  #btnRight {
+    width: 50%;
+    padding: 1em;
+  }
+  nav ul {
+    margin-top: 0;
+    padding-left: 10em;
+    color: white;
+  }
+  .hamburger {
+    display: none;
+  }
+  header nav {
+    display: flex;
+    justify-content: left;
+    background-color: transparent;
+  }
+  .close {
+    display: none;
+  }
+  #intro,
+  #aboutUs,
+  #manufactureSec {
+    grid-column: 3/5;
+  }
+  .lowerSection {
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    height: 30vh;
+  }
+  .imageDark,
+  .imageLight {
+    height: 100%;
+  }
+  .imageDark {
+    grid-column: 1/2;
+  }
+  .aboutOurFurnitureSec {
+    grid-column: 2/3;
+  }
+  .imageLight {
+    grid-column: 3/4;
+  }
+}
+
+/*____Footer____*/
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin: 2em 1em;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
