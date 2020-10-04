@@ -4,6 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="Description"
+    content="Author: A.I.M. This is my attempt at intermediate challenge from frontendmentor named Room homepage">
+  <meta name="robots" content="max-snippet:20, max-image-preview:standard" />
   <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
@@ -15,7 +18,8 @@
 
   <script src="index.js"></script>
 
-  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap"
+    rel="stylesheet preconnect">
 
 </head>
 
@@ -139,5 +143,21 @@
     </div>
   </main>
 </body>
+
+<script>
+  //navigation for mobile
+  function navigationAppears() {
+    let nav = document.querySelector("nav");
+    let header = document.querySelector(".svg");
+    header.style.display = "none";
+    nav.style.display = "flex";
+  }
+  function navigationDisAppears() {
+    let nav = document.querySelector("nav");
+    let header = document.querySelector(".svg");
+    header.style.display = "flex";
+    nav.style.display = "none";
+  }
+</script>
 
 </html>

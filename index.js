@@ -49,17 +49,3 @@ function rightClicked() {
   }
   sectionChange[i].style.display = "block";
 }
-
-//navigation for mobile
-function navigationAppears() {
-  let nav = document.querySelector("nav");
-  let header = document.querySelector(".svg");
-  header.style.display = "none";
-  nav.style.display = "flex";
-}
-function navigationDisAppears() {
-  let nav = document.querySelector("nav");
-  let header = document.querySelector(".svg");
-  header.style.display = "flex";
-  nav.style.display = "none";
-}

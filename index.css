@@ -13,7 +13,7 @@ body {
   font-size: 12px;
 }
 section p {
-  color: gray;
+  color: var(--VeryDarkGray);
 }
 .imageLight,
 .imageDark {
@@ -161,12 +161,8 @@ nav svg {
 /*____LowerSection____*/
 @media only screen and (min-width: 976px) {
   main {
-    width: min(1250px, 100%);
+    width: min(1440px, 100%);
     margin: auto;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
   }
   header {
     background-size: cover;
@@ -221,7 +217,7 @@ nav svg {
   .lowerSection {
     display: grid;
     grid-template-columns: 30% 40% 30%;
-    height: 30vh;
+    height: auto;
   }
   .imageDark,
   .imageLight {
